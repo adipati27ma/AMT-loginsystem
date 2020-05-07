@@ -15,11 +15,11 @@
                   <h1 class="h4 text-gray-900 mb-4">Login Page</h1>
                 </div>
 
-                <?= $this->session->flashdata('regist_success'); ?>
+                <?= $this->session->flashdata('message'); ?>
 
                 <form class="user" method="post" action="<?= base_url('auth'); ?>">
                   <div class="form-group">
-                    <input type="text" class="form-control form-control-user" name="email" id="email" placeholder="Enter Email Address...">
+                    <input type="text" value="<?= set_value('email');?>" class="form-control form-control-user" name="email" id="email" placeholder="Enter an Email Address...">
                     <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                   </div>
                   <div class="form-group">
