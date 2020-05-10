@@ -49,6 +49,12 @@
 	<!-- Custom scripts for all pages-->
 	<script src="<?= base_url('assets/');?>js/sb-admin-2.min.js"></script>
 
+	<!-- Sweet Alert 2 Scripts -->
+	<script src="<?= base_url('assets/');?>js/dist/sweetalert2.all.min.js"></script>
+
+	<!-- My Script -->
+	<script src="<?= base_url('assets/js/script.js'); ?>"></script>
+
 </body>
 
 </html>

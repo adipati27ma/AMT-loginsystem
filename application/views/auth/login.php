@@ -19,7 +19,7 @@
 
                 <form class="user" method="post" action="<?= base_url('auth'); ?>">
                   <div class="form-group">
-                    <input type="text" value="<?= set_value('email');?>" class="form-control form-control-user" name="email" id="email" placeholder="Enter an Email Address...">
+                    <input type="text" value="<?= set_value('email'); ?>" class="form-control form-control-user" name="email" id="email" placeholder="Enter an Email Address...">
                     <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                   </div>
                   <div class="form-group">
@@ -32,7 +32,7 @@
                 </form>
                 <hr>
                 <div class="text-center">
-                  <a class="small" href="forgot-password.html">Forgot Password?</a>
+                  <a class="small" href="<?= base_url('auth/forgotpassword'); ?>">Forgot Password?</a>
                 </div>
                 <div class="text-center">
                   <a class="small" href="<?= base_url('auth/registration'); ?>">Create an Account!</a>

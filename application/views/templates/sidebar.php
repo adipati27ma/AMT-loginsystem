@@ -2,7 +2,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('user') ?>">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-code"></i>
         </div>
@@ -45,19 +45,22 @@
     ?>
     
         <?php foreach ($subMenu as $sm) : ?>
-            
+            <?php if ($title == $sm['title']) : ?>
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item">
-            <a class="nav-link" href="<?= base_url($sm['url']); ?>">
-                <i class="<?= $sm['icon']; ?>"></i>
-                <span><?= $sm['title']; ?></span>
-            </a>
-        </li>
+                <li class="nav-item active">
+            <?php else : ?>
+                <li class="nav-item">
+            <?php endif; ?>
+                    <a class="nav-link pb-0" href="<?= base_url($sm['url']); ?>">
+                        <i class="<?= $sm['icon']; ?>"></i>
+                        <span><?= $sm['title']; ?></span>
+                    </a>
+                </li>
 
         <?php endforeach; ?>
         
         <!-- Divider -->
-        <hr class="sidebar-divider">
+        <hr class="sidebar-divider mt-3">
     
     <?php endforeach; ?>
 
